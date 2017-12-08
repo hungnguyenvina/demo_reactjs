@@ -16,7 +16,13 @@ export default {
     extensions: ['*', '.js', '.jsx', '.json']
   },
   devtool: 'source-map', // more info:https://webpack.js.org/guides/production/#source-mapping and https://webpack.js.org/configuration/devtool/
-  entry: path.resolve(__dirname, 'src/index'),
+  entry: [
+    path.resolve(__dirname, 'src/index'),
+    path.resolve(__dirname, 'src/styles/bootstrap.min.css'),
+    path.resolve(__dirname, 'src/styles/styles.scss'),
+    path.resolve(__dirname, 'src/styles/hungnguyenstyle.css'),
+    path.resolve(__dirname, 'src/styles/about-page.css')
+  ],
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'dist'),

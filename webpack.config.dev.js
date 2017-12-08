@@ -13,6 +13,11 @@ export default {
     'react-hot-loader/patch',
     'webpack-hot-middleware/client?reload=true',
     path.resolve(__dirname, 'src/index.js') // Defining path seems necessary for this to work consistently on Windows machines.
+    ,
+    path.resolve(__dirname, 'src/styles/bootstrap.min.css'),
+    path.resolve(__dirname, 'src/styles/styles.scss'),
+    path.resolve(__dirname, 'src/styles/hungnguyenstyle.css'),
+    path.resolve(__dirname, 'src/styles/about-page.css')
   ],
   target: 'web',
   output: {
@@ -102,7 +107,7 @@ export default {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true
+              sourceMap: false
             }
           }, {
             loader: 'postcss-loader',

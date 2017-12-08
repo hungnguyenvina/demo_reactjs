@@ -6,7 +6,10 @@ import HomePage from './HomePage';
 import FuelSavingsPage from '../containers/FuelSavingsPage';
 import AboutPage from './AboutPage';
 import NotFoundPage from './NotFoundPage';
-
+import Login from './Login';
+import ProductList from './product/ProductList';
+import ProductAdd from './product/ProductAdd';
+import ProductUpdate from './product/ProductUpdate';
 // This is a class-based component because the current
 // version of hot reloading won't hot reload a stateless
 // component at the top-level.
@@ -22,10 +25,21 @@ class App extends React.Component {
           <NavLink to="/fuel-savings" activeStyle={activeStyle}>Demo App</NavLink>
           {' | '}
           <NavLink to="/about" activeStyle={activeStyle}>About</NavLink>
+          {' | '}
+          <NavLink to="/list" activeStyle={activeStyle}>Product's list</NavLink>
+          {' | '}
+          <NavLink to="/add" activeStyle={activeStyle}>Add product</NavLink>
+          {' | '}
+          <NavLink to="/login" activeStyle={activeStyle}>Login</NavLink>
+
         </div>
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/fuel-savings" component={FuelSavingsPage} />
+          <Route path="/login" component={Login} />
+          <Route path="/add" component={ProductAdd} />
+          <Route path="/update/:id" component={ProductUpdate} />
+          <Route path="/list" component={ProductList} />
           <Route path="/about" component={AboutPage} />
           <Route component={NotFoundPage} />
         </Switch>

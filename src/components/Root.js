@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { ConnectedRouter } from 'react-router-redux';
 import { Provider } from 'react-redux';
+/*import ProductList from './product/ProductList';*/
+
 import App from './App';
 
 export default class Root extends Component {
+
+  
   render() {
     const { store, history } = this.props;
     return (
@@ -14,6 +18,7 @@ export default class Root extends Component {
         </ConnectedRouter>
       </Provider>
     );
+
   }
 }
 
