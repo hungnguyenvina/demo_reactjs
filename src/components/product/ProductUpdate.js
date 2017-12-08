@@ -45,13 +45,13 @@ export default class ProductUpdate extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        console.log('product object:',this.state.product);
+        //console.log('product object:',this.state.product);
         var productID = this.props.match.params.id;
-        console.log('product id:',productID);
+        //console.log('product id:',productID);
         //var self = this;
 
         let productJSON = JSON.stringify(this.state.product);
-        console.log('product json:',productJSON);
+        //console.log('product json:',productJSON);
         axios.put('http://localhost:3005/products/'+productID, productJSON,{
             headers: {
                 'Content-Type': 'application/json'
